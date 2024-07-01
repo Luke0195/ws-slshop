@@ -27,7 +27,7 @@ public class StateServiceImpl implements StateService {
     Optional<State> findStateByName = stateRepository.findStateByName(stateRequestDto.getName());
     if(findStateByName.isPresent()) throw new ResourceAlreadyExistsException(getExceptionMessage("name"));
     Optional<State> findStateByUf = stateRepository.findStateByUf(stateRequestDto.getUf());
-    if(findStateByUf.isPresent()) throw new ResourceAlreadyExistsException("uf");
+    if(findStateByUf.isPresent()) throw new ResourceAlreadyExistsException(getExceptionMessage("uf"));
     State createState = new State();
     createState.setName(stateRequestDto.getName());
     createState.setUf(stateRequestDto.getUf());

@@ -25,7 +25,6 @@ public class StateController {
   @PostMapping
   public ResponseEntity<StateResponseDto> createState(@Valid @RequestBody StateRequestDto stateRequestDto){
     StateResponseDto stateResponseDto = stateServiceImpl.createState(stateRequestDto);
-    URI uri = HttpUtil.getUriFromRequest(stateResponseDto.getId());
-    return ResponseEntity.created(uri).body(stateResponseDto);
+    return HttpUtil.getCreatedResponse(stateResponseDto, stateResponseDto.getId());
   }
 }
