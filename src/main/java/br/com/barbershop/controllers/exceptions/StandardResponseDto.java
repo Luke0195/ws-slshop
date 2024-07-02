@@ -2,7 +2,7 @@ package br.com.barbershop.controllers.exceptions;
 
 import java.io.Serializable;
 import java.time.Instant;
-import java.util.ArrayList;
+
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonProperty;

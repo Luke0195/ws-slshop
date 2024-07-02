@@ -2,7 +2,6 @@ package br.com.barbershop.bunisses.impl;
 
 import java.util.Optional;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.com.barbershop.bunisses.exceptions.ResourceAlreadyExistsException;

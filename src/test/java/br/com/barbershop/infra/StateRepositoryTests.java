@@ -28,7 +28,6 @@ public class StateRepositoryTests {
     Assertions.assertNotNull(entity.getId());
     Assertions.assertNotNull(entity.getName());
     Assertions.assertNotNull(entity.getUf());
-    
   }
 
 }
