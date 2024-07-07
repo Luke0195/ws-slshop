@@ -17,8 +17,9 @@ public class StateFactory {
    return State.builder().id(1L).name(stateRequestDto.getName()).uf(stateRequestDto.getUf()).build();
   }
 
-  public static StateResponseDto makeStateResponseDto(StateResponseDto stateResponseDto){
-    return StateResponseDto.builder().id(stateResponseDto.getId()).name(stateResponseDto.getName()).uf(stateResponseDto.getUf()).build();
+  public static StateResponseDto makeStateResponseDto(State entity){
+    return StateResponseDto.builder().id(entity.getId()).name(entity.getName()).uf(entity.getUf()).build();
   }
+
 
 }
