@@ -2,6 +2,7 @@ package br.com.barbershop.utils.http;
 
 import java.net.URI;
 
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -9,6 +10,10 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 public class HttpUtil {
   
   private HttpUtil(){}
+
+  public static String getURIPath(HttpServletRequest request){
+    return request.getRequestURI();
+  }
 
   public static URI getUriFromRequest(Object object){
     return ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(object).toUri();

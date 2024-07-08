@@ -2,7 +2,7 @@ package br.com.barbershop.controllers;
 
 import br.com.barbershop.bunisses.impl.CityServiceImpl;
 import br.com.barbershop.dto.request.CityRequestDto;
-import br.com.barbershop.dto.response.CityResponseDto;
+
 import br.com.barbershop.factories.CityFactory;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
